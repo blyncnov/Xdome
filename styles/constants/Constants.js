@@ -66,8 +66,16 @@ padding: ${({ p }) => p ? p : 0};
 
   }
 
+  .todo__list{
+    font-size: 14px;
+  }
+
 @media (max-width: 768px) {
-flex-direction: ${({mdir}) => mdir ? mdir : "row"};
+flex-direction: ${({ mdir }) => mdir ? mdir : "row"};
+
+  .todo__list{
+    font-size: 13px;
+  }
 }
 `
 

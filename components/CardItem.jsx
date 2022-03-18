@@ -11,7 +11,7 @@ const CardItem = () => {
 
                 <Container Bg="transparent">
                     <Flexbox align="center" justify="space-between" mdir="row">
-                        <h3 className="display__text">Go to the Gym dummas</h3>
+                        <h3 className="todo__list">Go to the Gym dummas</h3>
                         <Flexbox align="center" justify="space-between" wdir="row">
                             <input type="checkbox" placeholder="Add Todo Item" />
                             <MdAutoDelete />
@@ -26,7 +26,7 @@ const CardItem = () => {
 
                 <Container Bg="transparent" >
                     <Flexbox align="center" justify="space-between" mdir="row">
-                        <h3 className="display__text">Finish React 2pm to 4pm </h3>
+                        <h3 className="todo__list">Finish React 2pm to 4pm </h3>
                         <Flexbox align="center" justify="space-between" wdir="row">
                             <input type="checkbox" placeholder="Add Todo Item" />
                             <MdAutoDelete />
@@ -41,11 +41,11 @@ const CardItem = () => {
 
                 <Container Bg="transparent" >
                     <Flexbox align="center" justify="space-between" mdir="row">
-                        <h3 className="display__text">Attend Funaab Convocation </h3>
+                        <h3 className="todo__list">Attend Funaab Convocation </h3>
                         <Flexbox align="center" justify="space-between" wdir="row">
                             <input type="checkbox" placeholder="Add Todo Item" />
                             <MdAutoDelete />
-                           <FiEdit />
+                            <FiEdit />
                         </Flexbox>
                     </Flexbox>
                 </Container>
@@ -56,11 +56,11 @@ const CardItem = () => {
 
                 <Container Bg="transparent" >
                     <Flexbox align="center" justify="space-between" mdir="row">
-                        <h3 className="display__text">Text your Girlfriend</h3>
+                        <h3 className="todo__list">Text your Girlfriend</h3>
                         <Flexbox align="center" justify="space-between" wdir="row">
                             <input type="checkbox" placeholder="Add Todo Item" />
                             <MdAutoDelete />
-                           <FiEdit />
+                            <FiEdit />
                         </Flexbox>
                     </Flexbox>
                 </Container>
@@ -71,11 +71,11 @@ const CardItem = () => {
 
                 <Container Bg="transparent" >
                     <Flexbox align="center" justify="space-between" mdir="row">
-                        <h3 className="display__text">Read Manga &ldquo;Demon Slayer&ldquo; </h3>
+                        <h3 className="todo__list">Read Manga &ldquo;Demon Slayer&ldquo; </h3>
                         <Flexbox align="center" justify="space-between" mdir="row" wdir="row">
                             <input type="checkbox" placeholder="Add Todo Item" />
                             <MdAutoDelete />
-                           <FiEdit />
+                            <FiEdit />
                         </Flexbox>
                     </Flexbox>
                 </Container>
@@ -86,11 +86,11 @@ const CardItem = () => {
 
                 <Container Bg="transparent" >
                     <Flexbox align="center" justify="space-between" mdir="row">
-                        <h3 className="display__text">Go Pick the Children </h3>
+                        <h3 className="todo__list">Go Pick the Children </h3>
                         <Flexbox align="center" justify="space-between" wdir="row">
                             <input type="checkbox" placeholder="Add Todo Item" />
                             <MdAutoDelete />
-                           <FiEdit />
+                            <FiEdit />
                         </Flexbox>
                     </Flexbox>
                 </Container>
@@ -101,11 +101,11 @@ const CardItem = () => {
 
                 <Container Bg="transparent" >
                     <Flexbox align="center" justify="space-between" mdir="row">
-                        <h3 className="display__text">Play Football for a while </h3>
+                        <h3 className="todo__list">Play Football for a while </h3>
                         <Flexbox align="center" justify="space-between" wdir="row">
                             <input type="checkbox" placeholder="Add Todo Item" />
                             <MdAutoDelete />
-                           <FiEdit />
+                            <FiEdit />
                         </Flexbox>
                     </Flexbox>
                 </Container>
