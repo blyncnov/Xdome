@@ -70,6 +70,17 @@ padding: ${({ p }) => p ? p : 0};
     font-size: 14px;
   }
 
+  .showcolor{
+ background: radial-gradient(circle,  #0ff 0%, #e0e5ec 60%);
+   animation: colorchange 3s linear infinite;
+  }
+
+      .showcolor:active{
+ background: radial-gradient(circle,  #0ff 0%, #e0e5ec 60%);
+  color: rgba(102,102,102,.5); 
+  animation: colorchange 3s linear infinite;
+} 
+
 @media (max-width: 768px) {
 flex-direction: ${({ mdir }) => mdir ? mdir : "row"};
 
@@ -194,10 +205,18 @@ background: radial-gradient(circle,  #0ff 0%, #e0e5ec 60%);
 
 export const Card2 = styled(Card)`
 animation: none;
+background: transparent;
 
  &:hover{
 animation: none;
+background: transparent;
 }
+
+// &:active{
+//  background: radial-gradient(circle,  #0ff 0%, #e0e5ec 60%);
+//   color: rgba(102,102,102,.5); 
+//   animation: colorchange 3s linear infinite;
+// } 
 `
 
 export const Logo = styled.div`

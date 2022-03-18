@@ -10,7 +10,7 @@ const CardItem = () => {
             <Card2 Bg="transparent">
 
                 <Container Bg="transparent">
-                    <Flexbox align="center" justify="space-between" mdir="row">
+                    <Flexbox align="center" justify="space-between" mdir="row" className="showcolor">
                         <h3 className="todo__list">Go to the Gym dummas</h3>
                         <Flexbox align="center" justify="space-between" wdir="row">
                             <input type="checkbox" placeholder="Add Todo Item" />
