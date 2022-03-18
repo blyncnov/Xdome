@@ -12,7 +12,7 @@ const Header = () => {
 
                     <Flexbox align="center" justify="space-between" p="2em 0" color="white" mdir="row">
                         <Logo className="logo">
-                            <h1>Xdome</h1>
+                            <h1 contentEditable="true">Xdome</h1>
                         </Logo>
                         <Circle Bg="white">
                             <FiPlus style={{ color: "black", fontWeight: "900", fontSize: "2em" }} />
