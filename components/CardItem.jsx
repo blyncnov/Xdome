@@ -5,15 +5,26 @@ import { MdAutoDelete } from "react-icons/md"
 import { FiEdit } from "react-icons/fi"
 
 const CardItem = () => {
+    const [Finished, setFinished] = React.useState(false)
+
+    const FinishedHandler = () => {
+        setFinished(!Finished);
+        if (Finished) {
+            console.log("you have unread it");
+        } else {
+            console.log("you have read it");
+        }
+    }
+
     return (
         <>
             <Card2 Bg="transparent">
 
                 <Container Bg="transparent">
                     <Flexbox align="center" justify="space-between" mdir="row" className="showcolor">
-                        <h3 className="todo__list">Go to the Gym dummas</h3>
+                        <h3 className={Finished ? "todo__list finished" : "todo__list"}>Go to the Gym dummas</h3>
                         <Flexbox align="center" justify="space-between" wdir="row">
-                            <input type="checkbox" placeholder="Add Todo Item" />
+                            <input onClick={FinishedHandler} type="checkbox" placeholder="Add Todo Item" />
                             <MdAutoDelete />
                             <FiEdit />
                         </Flexbox>

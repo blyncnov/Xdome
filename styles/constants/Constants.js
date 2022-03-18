@@ -70,6 +70,11 @@ padding: ${({ p }) => p ? p : 0};
     font-size: 14px;
   }
 
+  .finished{
+    text-decoration: line-through;
+    color: blue;
+  }
+
   .showcolor{
  background: radial-gradient(circle,  #0ff 0%, #e0e5ec 60%);
    animation: colorchange 3s linear infinite;
