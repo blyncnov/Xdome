@@ -11,7 +11,9 @@ const Footer = () => {
 
 
                     <h4> Xdome</h4>
-                    <h6>Best ToDo application by blyncnov</h6>
+                    <h6>Best ToDo application by
+                        <span> <a style={{ color: "grey" }} href="https://blyncnov.com">blyncnov</a></span>
+                    </h6>
 
 
                 </Restrainer>

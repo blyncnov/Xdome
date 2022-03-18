@@ -11,7 +11,9 @@ const Home = () => {
                     <Card>
 
                         <Flexbox align="center" justify="space-between" mdir="row">
-                            <h3 className="display__text">Xdome ToDo Application by Blyncnov </h3>
+                            <h3 className="display__text">Xdome ToDo Application by
+                                <span> <a style={{ color: "inherit", textAlign: "center" }} href="https://blyncnov.com">blyncnov</a></span>
+                            </h3>
                         </Flexbox>
 
 
