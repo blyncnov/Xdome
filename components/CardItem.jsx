@@ -21,7 +21,11 @@ const CardItem = () => {
     return (
         <>
             <Card2 Bg="transparent">
+                <label style={{ float: 'right' }} htmlFor="checkall">Mark All Done  &nbsp;
+                    <input onClick={FinishedHandler} type="checkbox" placeholder="Add Todo Item" />
 
+                </label>
+                <br />
                 {CardList.map((items) => {
                     return (
                         <div key={items.id}>
