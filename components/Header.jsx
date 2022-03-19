@@ -6,6 +6,11 @@ import { FiPlus } from "react-icons/fi"
 import AddForm from "./AddForm"
 
 const Header = () => {
+    const [show, setShow] = React.useState(false)
+
+    const showAddFormHandler = () => {
+        setShow(!show)
+    }
     return (
         <>
             <Container Bg="blue" style={{ borderRadius: "0% 0 10% 10% " }}>
@@ -15,14 +20,14 @@ const Header = () => {
                         <Logo className="logo">
                             <h1 contentEditable="true">Xdome</h1>
                         </Logo>
-                        <Circle Bg="white">
-                            <FiPlus style={{ color: "black", fontWeight: "900", fontSize: "2em" }} />
+                        <Circle Bg="white" onClick={showAddFormHandler}>
+                            <FiPlus onClick={showAddFormHandler} style={{ color: "black", fontWeight: "900", fontSize: "2em" }} />
                         </Circle>
                     </Flexbox>
 
                 </Restrainer>
             </Container>
-            <AddForm />
+            <AddForm showAddForm={show} />
         </>
     )
 }

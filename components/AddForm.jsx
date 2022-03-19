@@ -3,10 +3,10 @@ import React from "react"
 import { Container, Card, Flexbox, Restrainer, Logo } from "../styles/constants/Constants"
 import { InputeContainer } from "../styles/styled/Input"
 
-const AddForm = () => {
+const AddForm = ({ showAddForm }) => {
     return (
         <>
-            <Container Bg="transparent" >
+            <Container Bg="transparent" showAddForm={showAddForm}>
                 <Restrainer >
                     <Card>
                         <h4> Add New item </h4>
