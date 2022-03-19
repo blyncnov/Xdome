@@ -5,10 +5,11 @@ width: 100%;
 background-color: ${({ Bg }) => Bg ? Bg : "#fafafa"};
 border: ${({ Bd }) => Bd ? Bd : "none"};
 transition: all 0.3s ease-in-out;
-opacity: ${({ showAddForm }) => showAddForm ? "0.1" : "none"};
+display: ${({ showAddForm }) => showAddForm ? "none" : "block"};
 
 
 &:active {
+  
 }
 `
 

@@ -6,7 +6,7 @@ import { FiPlus } from "react-icons/fi"
 import AddForm from "./AddForm"
 
 const Header = () => {
-    const [show, setShow] = React.useState(false)
+    const [show, setShow] = React.useState(true)
 
     const showAddFormHandler = () => {
         setShow(!show)
