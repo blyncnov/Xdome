@@ -9,7 +9,7 @@ const AddForm = ({ showAddForm }) => {
             <Container Bg="transparent" showAddForm={showAddForm}>
                 <Restrainer >
                     <Card>
-                        <h4> Add New item </h4>
+                        <h4> Add New Item </h4>
                         <InputeContainer className="div">
                             <input type="text" placeholder="Add Subject" />
                             <input type="text" placeholder="Add Todo Item" />
