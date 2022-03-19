@@ -9,7 +9,11 @@ display: ${({ showAddForm }) => showAddForm ? "none" : "block"};
 
 
 &:active {
+<<<<<<< HEAD
   
+=======
+opacity: 1;
+>>>>>>> 375a1944693823a9c232b2e2402f7c83e2d6493d
 }
 `
 
