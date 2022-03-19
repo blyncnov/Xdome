@@ -6,7 +6,7 @@ width: 100%;
 input{
     width: 100%;
     display: block;
-    padding: .5em 1em ;
+    padding: 1em 1em ;
     margin: 1em 0;
     border: 1px solid #eee;
     color: #333;
