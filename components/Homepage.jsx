@@ -1,9 +1,12 @@
 import React from "react"
+import { useSelector } from "react-redux"
 
-import { Container, Card, Flexbox, Restrainer, Button } from "../styles/constants/Constants"
+import { Container, Card, Flexbox, Restrainer } from "../styles/constants/Constants"
 import CardItem from "./CardItem"
 
 const Home = () => {
+    const Total = useSelector((state) => state.Todo.value)
+
     return (
         <>
             <Container Bg="#E6E9ED">
@@ -15,12 +18,10 @@ const Home = () => {
                                 <span> <a style={{ color: "inherit", textAlign: "center" }} href="https://blyncnov.com">blyncnov</a></span>
                             </h3>
                         </Flexbox>
-
-
                     </Card>
 
                     <br />
-                    <h2>Your Todo Item</h2>
+                    <h2>Your Todo Item  &nbsp;({Total}) &nbsp;</h2>
 
                     <CardItem />
                 </Restrainer>
