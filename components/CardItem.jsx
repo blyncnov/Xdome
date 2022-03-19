@@ -4,6 +4,8 @@ import { Container, Card2, Flexbox, Restrainer, Button } from "../styles/constan
 import { MdAutoDelete } from "react-icons/md"
 import { FiEdit } from "react-icons/fi"
 
+import { CardList } from "../data/CardItemList"
+
 const CardItem = () => {
     const [Finished, setFinished] = React.useState(false)
 
@@ -20,106 +22,27 @@ const CardItem = () => {
         <>
             <Card2 Bg="transparent">
 
-                <Container Bg="transparent">
-                    <Flexbox align="center" justify="space-between" mdir="row" className="showcolor">
-                        <h3 className={Finished ? "todo__list finished" : "todo__list"}>Go to the Gym dummas</h3>
-                        <Flexbox align="center" justify="space-between" wdir="row">
-                            <input onClick={FinishedHandler} type="checkbox" placeholder="Add Todo Item" />
-                            <MdAutoDelete />
-                            <FiEdit />
-                        </Flexbox>
-                    </Flexbox>
-                </Container>
+                {CardList.map((items) => {
+                    return (
+                        <div key={items.id}>
+                            <Container Bg="transparent">
+                                <h5>{items.subject}</h5>
+                                <Flexbox align="center" justify="space-between" mdir="row" className="showcolor">
+                                    <h3 className={Finished ? "todo__list finished" : "todo__list"}>{items.description}</h3>
+                                    <Flexbox align="center" justify="space-between" wdir="row">
+                                        <input onClick={FinishedHandler} type="checkbox" placeholder="Add Todo Item" />
+                                        <MdAutoDelete />
+                                        <FiEdit />
+                                    </Flexbox>
+                                </Flexbox>
+                            </Container>
 
-                <br />
-                <hr />
-                <br />
-
-                <Container Bg="transparent" >
-                    <Flexbox align="center" justify="space-between" mdir="row">
-                        <h3 className="todo__list">Finish React 2pm to 4pm </h3>
-                        <Flexbox align="center" justify="space-between" wdir="row">
-                            <input type="checkbox" placeholder="Add Todo Item" />
-                            <MdAutoDelete />
-                            <FiEdit />
-                        </Flexbox>
-                    </Flexbox>
-                </Container>
-
-                <br />
-                <hr />
-                <br />
-
-                <Container Bg="transparent" >
-                    <Flexbox align="center" justify="space-between" mdir="row">
-                        <h3 className="todo__list">Attend Funaab Convocation </h3>
-                        <Flexbox align="center" justify="space-between" wdir="row">
-                            <input type="checkbox" placeholder="Add Todo Item" />
-                            <MdAutoDelete />
-                            <FiEdit />
-                        </Flexbox>
-                    </Flexbox>
-                </Container>
-
-                <br />
-                <hr />
-                <br />
-
-                <Container Bg="transparent" >
-                    <Flexbox align="center" justify="space-between" mdir="row">
-                        <h3 className="todo__list">Text your Girlfriend</h3>
-                        <Flexbox align="center" justify="space-between" wdir="row">
-                            <input type="checkbox" placeholder="Add Todo Item" />
-                            <MdAutoDelete />
-                            <FiEdit />
-                        </Flexbox>
-                    </Flexbox>
-                </Container>
-
-                <br />
-                <hr />
-                <br />
-
-                <Container Bg="transparent" >
-                    <Flexbox align="center" justify="space-between" mdir="row">
-                        <h3 className="todo__list">Read Manga &ldquo;Demon Slayer&ldquo; </h3>
-                        <Flexbox align="center" justify="space-between" mdir="row" wdir="row">
-                            <input type="checkbox" placeholder="Add Todo Item" />
-                            <MdAutoDelete />
-                            <FiEdit />
-                        </Flexbox>
-                    </Flexbox>
-                </Container>
-
-                <br />
-                <hr />
-                <br />
-
-                <Container Bg="transparent" >
-                    <Flexbox align="center" justify="space-between" mdir="row">
-                        <h3 className="todo__list">Go Pick the Children </h3>
-                        <Flexbox align="center" justify="space-between" wdir="row">
-                            <input type="checkbox" placeholder="Add Todo Item" />
-                            <MdAutoDelete />
-                            <FiEdit />
-                        </Flexbox>
-                    </Flexbox>
-                </Container>
-
-                <br />
-                <hr />
-                <br />
-
-                <Container Bg="transparent" >
-                    <Flexbox align="center" justify="space-between" mdir="row">
-                        <h3 className="todo__list">Play Football for a while </h3>
-                        <Flexbox align="center" justify="space-between" wdir="row">
-                            <input type="checkbox" placeholder="Add Todo Item" />
-                            <MdAutoDelete />
-                            <FiEdit />
-                        </Flexbox>
-                    </Flexbox>
-                </Container>
+                            <br />
+                            <hr />
+                            <br />
+                        </div>
+                    )
+                })}
 
             </Card2>
 
