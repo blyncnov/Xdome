@@ -26,6 +26,7 @@ const CardItem = () => {
 
                 </label>
                 <br />
+                <br />
                 {CardList.map((items) => {
                     return (
                         <div key={items.id}>
