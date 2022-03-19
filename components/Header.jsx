@@ -11,6 +11,7 @@ const Header = () => {
     const showAddFormHandler = () => {
         setShow(!show)
     }
+
     return (
         <>
             <Container Bg="blue" style={{ borderRadius: "0% 0 10% 10% " }}>
@@ -18,7 +19,7 @@ const Header = () => {
 
                     <Flexbox align="center" justify="space-between" p="2em 0" color="white" mdir="row">
                         <Logo className="logo">
-                            <h1 contentEditable="true">Xdome</h1>
+                            <h1 >Xdome</h1>
                         </Logo>
                         <Circle Bg="white" onClick={showAddFormHandler}>
                             <FiPlus onClick={showAddFormHandler} style={{ color: "black", fontWeight: "900", fontSize: "2em" }} />
@@ -27,7 +28,7 @@ const Header = () => {
 
                 </Restrainer>
             </Container>
-            <AddForm showAddForm={show} />
+            <AddForm showAddForm={show} showHandler={setShow} />
         </>
     )
 }

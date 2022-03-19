@@ -6,15 +6,6 @@ background-color: ${({ Bg }) => Bg ? Bg : "#fafafa"};
 border: ${({ Bd }) => Bd ? Bd : "none"};
 transition: all 0.3s ease-in-out;
 display: ${({ showAddForm }) => showAddForm ? "none" : "block"};
-
-
-&:active {
-<<<<<<< HEAD
-  
-=======
-opacity: 1;
->>>>>>> 375a1944693823a9c232b2e2402f7c83e2d6493d
-}
 `
 
 export const Circle = styled.div`
