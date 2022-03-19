@@ -1,18 +1,16 @@
 import React from "react"
+import { useSelector } from "react-redux"
 
-import { Container, Card2, Flexbox, Restrainer, Button } from "../styles/constants/Constants"
+import { Container, Card2, Flexbox } from "../styles/constants/Constants"
+
 import { MdAutoDelete } from "react-icons/md"
 import { FiEdit } from "react-icons/fi"
-
-import { useSelector } from "react-redux"
 
 
 const CardItem = () => {
     const [Finished, setFinished] = React.useState(false)
 
     const CardList = useSelector((state) => state.Todo.lists)
-
-    console.log(CardList);
 
     const FinishedHandler = () => {
         setFinished(!Finished);
@@ -38,7 +36,7 @@ const CardItem = () => {
                             <Container Bg="transparent">
                                 <h5>{items.Subject}</h5>
                                 <Flexbox align="center" justify="space-between" mdir="row" className="showcolor">
-                                    <h3 className={Finished ? "todo__list finished" : "todo__list"}>{items.Description}</h3>
+                                    <h3 className={Finished ? "todo__list finished" : "todo__list"}>{items.Description} </h3>
                                     <Flexbox align="center" justify="space-between" wdir="row">
                                         <input type="checkbox" placeholder="Add Todo Item" />
                                         <MdAutoDelete />

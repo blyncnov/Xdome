@@ -5,8 +5,8 @@ import { Container, Card, Flexbox, Restrainer } from "../styles/constants/Consta
 import CardItem from "./CardItem"
 
 const Home = () => {
-    const Total = useSelector((state) => state.Todo.value)
-
+    const Total = useSelector((state) => state.Todo.lists)
+    console.log([Total]);
     return (
         <>
             <Container Bg="#E6E9ED">
@@ -21,7 +21,7 @@ const Home = () => {
                     </Card>
 
                     <br />
-                    <h2>Your Todo Item  &nbsp;({Total}) &nbsp;</h2>
+                    <h2>Your Todo Item  &nbsp;  ({Total.length}) &nbsp;</h2>
 
                     <CardItem />
                 </Restrainer>

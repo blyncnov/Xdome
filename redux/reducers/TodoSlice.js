@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 import {CardList} from "../../data/CardItemList"
 
 const initialState = {
-    value: CardList.length,
+    value: 1,
     lists: CardList
 }
 
@@ -15,7 +15,7 @@ export const ItemSliceCase = createSlice({
     },  
     
     TotalTodo: (state, action) => {
-      state.value 
+      // state.value 
     },
       DeleteTodo: (state, action) => {
       // state.lists += 1
