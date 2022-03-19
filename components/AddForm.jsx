@@ -40,8 +40,8 @@ const AddForm = ({ showAddForm, showHandler }) => {
                         <h4> Add New Item </h4>
                         <InputeContainer className="div">
                             <form onSubmit={handleSubmission}>
-                                <input type="text" placeholder="Add Subject" ref={subjectRef} />
-                                <input type="text" placeholder="Add Todo Item" ref={descriptionRef} />
+                                <input type="text" placeholder="Add Subject" required ref={subjectRef} />
+                                <input type="text" placeholder="Add Todo Item" required ref={descriptionRef} />
                                 <button type="submit">Add Todo</button>
                             </form>
                         </InputeContainer>
