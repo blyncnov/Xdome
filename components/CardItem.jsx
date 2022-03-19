@@ -39,8 +39,8 @@ const CardItem = () => {
                                     <h3 className={Finished ? "todo__list finished" : "todo__list"}>{items.Description} </h3>
                                     <Flexbox align="center" justify="space-between" wdir="row">
                                         <input type="checkbox" placeholder="Add Todo Item" />
-                                        <MdAutoDelete style={{ fontSize: "1.5em" }} />
-                                        <FiEdit style={{ fontSize: "1.5em" }} />
+                                        <MdAutoDelete style={{ fontSize: "1.2em" }} />
+                                        <FiEdit style={{ fontSize: "1.2em" }} />
                                     </Flexbox>
                                 </Flexbox>
                             </Container>
