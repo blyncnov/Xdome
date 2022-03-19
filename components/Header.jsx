@@ -3,6 +3,7 @@ import React from "react"
 import { Container, Card, Flexbox, Restrainer, Logo, Circle } from "../styles/constants/Constants"
 
 import { FiPlus } from "react-icons/fi"
+import { FaTimes } from "react-icons/fa"
 import AddForm from "./AddForm"
 
 const Header = () => {
@@ -22,7 +23,8 @@ const Header = () => {
                             <h1 >Xdome</h1>
                         </Logo>
                         <Circle Bg="white" onClick={showAddFormHandler}>
-                            <FiPlus onClick={showAddFormHandler} style={{ color: "black", fontWeight: "900", fontSize: "2em" }} />
+                            {show ? <FiPlus onClick={showAddFormHandler} style={{ color: "black", fontWeight: "900", fontSize: "2em" }} /> :
+                                <FaTimes onClick={showAddFormHandler} style={{ color: "black", fontWeight: "900", fontSize: "2em" }} />}
                         </Circle>
                     </Flexbox>
 
