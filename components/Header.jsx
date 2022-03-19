@@ -3,6 +3,7 @@ import React from "react"
 import { Container, Card, Flexbox, Restrainer, Logo, Circle } from "../styles/constants/Constants"
 
 import { FiPlus } from "react-icons/fi"
+import AddForm from "./AddForm"
 
 const Header = () => {
     return (
@@ -21,7 +22,7 @@ const Header = () => {
 
                 </Restrainer>
             </Container>
-
+            <AddForm />
         </>
     )
 }
