@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit'
 import {CardList} from "../../data/CardItemList"
 
 const initialState = {
-    value: 1,
     lists: CardList
 }
 
@@ -17,8 +16,8 @@ export const ItemSliceCase = createSlice({
     TotalTodo: (state, action) => {
       // state.value 
     },
-      DeleteTodo: (state, action) => {
-      // state.lists += 1
+    DeleteTodo: (state, action) => {
+        state.lists = state.lists.filter(item => item.id !== action.payload.id);
     },  
         UpdateTodo: (state, action) => {
       // state.lists += 1
