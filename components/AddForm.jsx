@@ -1,23 +1,24 @@
 import React, { useRef } from "react"
 
 import { useDispatch, useSelector } from "react-redux"
-import { AddTodo } from "../redux/reducers/TodoSlice.js"
+import { AddTodo, ShowAddForm } from "../redux/reducers/TodoSlice.js"
 
 import { Container, Card, Restrainer } from "../styles/constants/Constants"
 import { InputeContainer } from "../styles/styled/Input"
 
 
-const AddForm = ({ showAddForm, showHandler }) => {
+const AddForm = ({ showAddForm }) => {
+
     const dispatch = useDispatch()
     const CardList = useSelector((state) => state.Todo.lists)
+
 
     const subjectRef = useRef()
     const descriptionRef = useRef()
 
     const handleSubmission = (event) => {
-        event.preventDefault();
-        showHandler(!showAddForm);
 
+        event.preventDefault();
 
         const Subject = subjectRef.current.value;
         const Description = descriptionRef.current.value;
@@ -29,6 +30,8 @@ const AddForm = ({ showAddForm, showHandler }) => {
         }
 
         dispatch(AddTodo(TodoValue))
+
+        dispatch(ShowAddForm())
 
     }
 

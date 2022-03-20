@@ -1,11 +1,10 @@
 import React from "react"
 
 import { useDispatch, useSelector } from "react-redux"
-import { DeleteTodo } from "../redux/reducers/TodoSlice.js"
-
+import { DeleteTodo, UpdateEdit, ShowAddForm } from "../redux/reducers/TodoSlice.js"
 
 import { Container, Card2, Flexbox } from "../styles/constants/Constants"
-
+import { MdEditOff } from "react-icons/md"
 import { MdAutoDelete } from "react-icons/md"
 import { FiEdit } from "react-icons/fi"
 
@@ -16,6 +15,8 @@ const CardItem = () => {
     const [Finished, setFinished] = React.useState(false)
 
     const CardList = useSelector((state) => state.Todo.lists)
+    const EditTrue = useSelector((state) => state.Todo.click)
+
 
     const FinishedHandler = () => {
         setFinished(!Finished);
@@ -26,10 +27,14 @@ const CardItem = () => {
         }
     }
 
+    const UpdateFormHandler = () => {
+        console.log("you have Update an Item ");
+        dispatch(UpdateEdit({}))
+        dispatch(ShowAddForm({}))
+    }
 
     return (
         <>
-
             <Card2 Bg="transparent">
                 <label style={{ float: 'right' }} htmlFor="checkall">Mark All Done  &nbsp;
                     <input onClick={FinishedHandler} type="checkbox" placeholder="Add Todo Item" />
@@ -46,7 +51,8 @@ const CardItem = () => {
                                     <Flexbox align="center" justify="space-between" wdir="row">
                                         <input type="checkbox" placeholder="Add Todo Item" />
                                         <MdAutoDelete style={{ fontSize: "1.2em", cursor: "pointer" }} onClick={() => dispatch(DeleteTodo({ id: items.id }))} />
-                                        <FiEdit style={{ fontSize: "1.2em", cursor: "pointer" }} />
+                                        {EditTrue ? <FiEdit style={{ fontSize: "1.2em", cursor: "pointer" }} onClick={UpdateFormHandler} /> : <MdEditOff style={{ fontSize: "1.2em", cursor: "pointer" }} onClick={UpdateFormHandler} />}
+
                                     </Flexbox>
                                 </Flexbox>
                             </Container>

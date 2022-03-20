@@ -2,13 +2,23 @@ import { createSlice } from '@reduxjs/toolkit'
 import {CardList} from "../../data/CardItemList"
 
 const initialState = {
-    lists: CardList
+  lists: CardList,
+  show: true,
+  click: true
 }
 
 export const ItemSliceCase = createSlice({
   name: 'todos',
   initialState,
   reducers: {
+      ShowAddForm: (state, action) => {
+      state.show = !state.show
+    }, 
+         UpdateEdit: (state, action) => {
+      state.click = !state.click;
+          
+
+    }, 
     AddTodo: (state, action) => {
       state.lists.push(action.payload);
     },  
@@ -19,13 +29,18 @@ export const ItemSliceCase = createSlice({
     DeleteTodo: (state, action) => {
         state.lists = state.lists.filter(item => item.id !== action.payload.id);
     },  
-        UpdateTodo: (state, action) => {
-      // state.lists += 1
-    },  
+    UpdateTodo: (state, action) => {
+      state.items.map((item) => {
+        if (item.id !== action.payload.id) {
+          item.Subject = action.payload.Subject
+             item.Description = action.payload.Description
+       }
+     })
+    }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { AddTodo, DeleteTodo, UpdateTodo , TotalTodo} = ItemSliceCase.actions
+export const { AddTodo, DeleteTodo, UpdateTodo , TotalTodo, ShowAddForm, UpdateEdit} = ItemSliceCase.actions
 
 export default ItemSliceCase.reducer

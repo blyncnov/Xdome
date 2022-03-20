@@ -1,17 +1,20 @@
 import React from "react"
 
 import { Container, Card, Flexbox, Restrainer, Logo, Circle } from "../styles/constants/Constants"
+import { useDispatch, useSelector } from "react-redux"
+
+import { ShowAddForm } from "../redux/reducers/TodoSlice.js"
 
 import { FiPlus } from "react-icons/fi"
 import { FaTimes } from "react-icons/fa"
 import AddForm from "./AddForm"
 
 const Header = () => {
-    const [show, setShow] = React.useState(true)
+    const dispatch = useDispatch()
+    const show = useSelector((showed) => showed.Todo.show)
 
     const showAddFormHandler = () => {
-        setShow(!show)
-
+        dispatch(ShowAddForm())
     }
 
     return (
@@ -24,14 +27,14 @@ const Header = () => {
                             <h1 >Xdome</h1>
                         </Logo>
                         <Circle Bg="white" onClick={showAddFormHandler}>
-                            {show ? <FiPlus onClick={showAddFormHandler} style={{ color: "black", fontWeight: "900", fontSize: "2em" }} /> :
-                                <FaTimes onClick={showAddFormHandler} style={{ color: "black", fontWeight: "900", fontSize: "2em" }} />}
+                            {show ? <FiPlus style={{ color: "black", fontWeight: "900", fontSize: "2em" }} /> :
+                                <FaTimes style={{ color: "black", fontWeight: "900", fontSize: "2em" }} />}
                         </Circle>
                     </Flexbox>
 
                 </Restrainer>
             </Container>
-            <AddForm showAddForm={show} showHandler={setShow} />
+            <AddForm showAddForm={show} />
         </>
     )
 }

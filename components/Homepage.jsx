@@ -6,7 +6,7 @@ import CardItem from "./CardItem"
 
 const Home = () => {
     const Total = useSelector((state) => state.Todo.lists)
-    console.log([Total]);
+
     return (
         <>
             <Container Bg="#E6E9ED">
